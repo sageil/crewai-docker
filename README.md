@@ -1,5 +1,5 @@
 # About
-Repo to create a docker image to use to create crewAI agents using ["crewAI"](https://www.crewai.com/)
+Repo to create a docker image to use to create crewAI agents using [crewAI](https://www.crewai.com/)
 Building the docker image:
 ```bash
 docker image build --build-arg RELEASE_DATE="$(date +'%Y-%m-%d')" --build-arg CREWAI="0.41.1" --build-arg TOOLS="0.4.26" -t sageil/crewai .
