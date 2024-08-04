@@ -7,6 +7,7 @@ docker image build --build-arg RELEASE_DATE="$(date +'%Y-%m-%d')" --build-arg CR
 `CREWAI` and `TOOLS` are the versions of crewai and tools respectively, which can be found on [crewai](https://github.com/crewAIInc/crewAI) and [tools](https://github.com/crewAIInc/crewAI-tools)
 
 ### Using the publicly available image from docker hub
+***these steps assume the project being created is named `my_crew` as shown in the example below using `-e P= "my_crew"`***
 1. Navigate to where you want the crewAI project to be created
 2. Use the prebuilt images on dockerhub to create a crewAI project with the name `my_crew`: `docker container run -e P="my_crew" --name crew -it --rm -v $(pwd):/app sageil/crewai:1.0.0 bash` 
 3. Once the container running, you can use the following commands to interact with your crew by running `poetry install` then `poetry run my_crew` where `my_crew` is the crewAI project name.
