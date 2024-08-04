@@ -3,7 +3,7 @@ setup() {
   echo "Preparing  $P in $PWD "
   if [ ! -d "$P" ]; then
     crewai create "$P" && cd "$P"
-    poetry lock
+    poetry shell
   else
     cd "$P"
   fi
