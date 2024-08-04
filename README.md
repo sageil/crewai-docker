@@ -15,4 +15,4 @@ docker image build --build-arg RELEASE_DATE="$(date +'%Y-%m-%d')" --build-arg CR
 6. Execute `poetry run my_crew` to run your project from the container terminal.
 
 ### Autocomplete for crewAI commands
-To get autocomplete working for `poetry` commands in bash, type poetry followed by `tab`
+To get autocomplete working for `poetry` in bash, type poetry followed by `tab`
