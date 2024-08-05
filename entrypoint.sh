@@ -3,7 +3,7 @@ setup() {
   echo "Preparing  $P in $PWD "
   if [ ! -d "$P" ]; then
     crewai create "$P" && cd "$P"
-    poetry shell
+    python3 -m venv .venv
   else
     cd "$P"
   fi
