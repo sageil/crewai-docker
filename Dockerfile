@@ -22,7 +22,6 @@ RUN mkdir -p "$HOME/.local"
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 WORKDIR /app/
 RUN chown appuser:appgroup "/app/"
-#RUN python3 -m venv --copies venv
 RUN curl -sSL https://install.python-poetry.org | python3 - && poetry config virtualenvs.in-project true && \ 
   pip install crewai==${CREWAI} crewai-tools==${TOOLS} --no-cache-dir && \
   poetry completions bash >> ~/.bash_completion && echo "source /shell_venv.sh" >> ~/.bashrc
