@@ -26,6 +26,5 @@ RUN chown appuser:appgroup "/app/"
 RUN curl -sSL https://install.python-poetry.org | python3 - && poetry config virtualenvs.in-project true && \ 
   pip install crewai==${CREWAI} crewai-tools==${TOOLS} --no-cache-dir && \
   poetry completions bash >> ~/.bash_completion && echo "source /shell_venv.sh" >> ~/.bashrc
-#ENV PATH="/app/venv/bin:$PATH"
 ENTRYPOINT [ "/entrypoint.sh" ]
-#CMD [ "source", "${HOME}/${P}/.venv/bin/activate" ]
+
